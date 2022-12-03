@@ -142,7 +142,7 @@ local texth1 = Instance.new("TextLabel")
     texth1.BorderSizePixel = 0
     texth1.Size = UDim2.new(0, 130, 0, 20)
     texth1.Font = Enum.Font.GothamBold
-    texth1.Text = "  แจกทุกอย่าง"
+    texth1.Text = "  Xeris"
     texth1.TextColor3 = Color3.fromRGB(255, 255, 255)
     texth1.TextSize = 45.000
 
@@ -159,7 +159,7 @@ local texth2 = Instance.new("TextLabel")
     texth2.Text = "       Hub"
     texth2.TextColor3 = Color3.fromRGB(102, 204, 102)
     texth2.TextSize = 45.000
---by ดิส แจกทุกอย่างทีมี https://discord.gg/NvGY2vEkV2
+
 local namehu = Instance.new("TextLabel")
                   
     namehu.Parent = Main

@@ -1020,6 +1020,7 @@ do
             local Y = select(2, Library:GetTextBounds([[\ \ ]]..Text..[[ / /]], Enum.Font.Code, 14, Vector2.new(TextLabel.AbsoluteSize.X, math.huge)))
             TextLabel.Size = UDim2.new(1, -4, 0, Y)
             TextLabel.TextXAlignment = Enum.TextXAlignment.Center
+            TextLabel.Text = [[\ \ ]]..Text..[[ / /]]
         else
             Library:Create('UIListLayout', {
                 Padding = UDim.new(0, 4);

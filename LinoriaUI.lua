@@ -1020,7 +1020,7 @@ do
             local Y = select(2, Library:GetTextBounds([[\ \ ]]..Text..[[ / /]], Enum.Font.Code, 14, Vector2.new(TextLabel.AbsoluteSize.X, math.huge)))
             TextLabel.Size = UDim2.new(1, -4, 0, Y)
             TextLabel.TextXAlignment = Enum.TextXAlignment.Center
-            TextLabel.Text = [[\ \ ]]..Text..[[ / /]]
+            TextLabel.Text = [[\\ ]]..Text..[[ //]]
         else
             Library:Create('UIListLayout', {
                 Padding = UDim.new(0, 4);
@@ -2123,8 +2123,8 @@ do
     local WatermarkOuter = Library:Create('Frame', {
         BorderColor3 = Color3.new(0, 0, 0);
         Position = UDim2.new(0, 100, 0, -25);
-        Size = UDim2.new(0, 213, 0, 20);
-        ZIndex = 200;
+        Size = UDim2.new(0, 213, 1, 20);
+        ZIndex = 201;
         Visible = false;
         Parent = ScreenGui;
     });
@@ -2260,7 +2260,7 @@ end;
 
 function Library:SetWatermark(Text)
     local X, Y = Library:GetTextBounds(Text, Enum.Font.Code, 14);
-    Library.Watermark.Size = UDim2.new(0, X + 15, 0, (Y * 1.5) + 3);
+    Library.Watermark.Size = UDim2.new(0, X + 15, 0, (Y * 1.2) + 3);
     Library:SetWatermarkVisibility(true)
 
     Library.WatermarkText.Text = Text;
@@ -2456,7 +2456,7 @@ function Library:CreateWindow(...)
     });
 
     Library:Create('UIListLayout', {
-        Padding = UDim.new(0, 0);
+        Padding = UDim.new(0.01, 0);
         FillDirection = Enum.FillDirection.Horizontal;
         SortOrder = Enum.SortOrder.LayoutOrder;
         Parent = TabArea;
@@ -2491,7 +2491,7 @@ function Library:CreateWindow(...)
         local TabButton = Library:Create('Frame', {
             BackgroundColor3 = Library.BackgroundColor;
             BorderColor3 = Library.OutlineColor;
-            Size = UDim2.new(0, TabButtonWidth + 8 + 4, 1, 0);
+            Size = UDim2.new(-0, TabButtonWidth + 8 + 4, 1, 0);
             ZIndex = 1;
             Parent = TabArea;
         });
